@@ -1,0 +1,33 @@
+
+HOF
+  myCurry
+    myCurry
+      myCurry riffle == riffle2 [✔]
+        +++ OK, passed 100 tests.
+  myUncurry
+    myUncurry
+      myUncurry riffle2 == riffle [✔]
+        +++ OK, passed 100 tests.
+Lists
+  evenodds
+    evenodds
+      evenodds l == (evens l, odds l) [✔]
+        +++ OK, passed 100 tests.
+  riffle
+    riffle
+      riffle (evenodds l) == l [✔]
+        +++ OK, passed 100 tests.
+Stack
+  evalRPN
+    HW3.evalRPN
+      evalRPN [Push 2.0, Push 1.0, DoOp MinusOp] [] = 1.0 [✔]
+  toRPNopt
+    HW3.toRPNopt
+      toRPNopt (BinOp (Num 1.0) MinusOp (BinOp (Num 2.0) PlusOp (Num 3.0))) should be ([Push 2.0,Push 3.0,DoOp PlusOp,Push 1.0,Swap,DoOp MinusOp],2) [✔]
+      when given an expression with optimal depth 3
+        should find the optimal depth of 3 [✔]
+      when given an expression with optimal depth 4
+        should find the optimal depth of 4 [✔]
+
+Finished in 0.0057 seconds
+8 examples, 0 failures
